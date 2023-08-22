@@ -8,57 +8,58 @@ import {
     AiOutlineUser,
 } from "react-icons/ai";
 import Link from 'next/link';
+import styles from './header.module.scss';
 
 
 
 const Header: React.FC = () => {
     return (
-        <nav className='w-full flex items-center fixed'>
-            <ul className='flex items-center gap-4'>
+        <nav className={`w-full flex items-center fixed px-8 py-1 justify-center ${styles.nav}`}>
+            <ul className='flex items-center gap-14'>
                 <li className='list-none'>
-                    <Link href={'/'} className='flex gap-2 items-center'>
-                        <>
+                    <Link href={'/'} className='block relative z-10 text-white text-lg'>
+                        <div className='flex items-center gap-2'>
                             <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-                        </>
+                        </div>
                     </Link>
                 </li>
                 <li className='list-none'>
-                    <Link href={'/'} className='flex gap-2 items-center'>
-                        <>
+                    <Link href={'/about'} className='block relative z-10 text-white text-lg'>
+                        <div className='flex items-center gap-2'>
                             <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-                        </>
+                        </div>
                     </Link>
                 </li>
                 <li className='list-none'>
-                    <Link href={'/'} className='flex gap-2 items-center'>
-                        <>
+                    <Link href={'/projects'} className='block relative z-10 text-white text-lg'>
+                        <div className='flex items-center gap-2'>
                             <AiOutlineFundProjectionScreen
                                 style={{ marginBottom: "2px" }}
                             />
                             Projects
-                        </>
+                        </div>
                     </Link>
                 </li>
                 <li className='list-none'>
-                    <Link href={'/'} className='flex gap-2 items-center'>
-                        <>
+                    <Link href={'/resume'} className='block relative z-10 text-white text-lg'>
+                        <div className='flex items-center gap-2'>
                             <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-                        </>.
+                        </div>
                     </Link>
                 </li>
-                <li className='list-none'>
-                    <Link href={'/'} className='flex gap-2 items-center'>
-                        <>
+                {/* <li className='list-none'>
+                    <Link href={'/'} className='block relative z-10 text-white text-lg'>
+                        <div className='flex items-center gap-2'>
                             <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-                        </>
+                        </div>
                     </Link>
-                </li>
-                <li className='list-none'>
-                    <Link href={'/'} className='flex '>
-                        <>
+                </li> */}
+                <li className={`list-none ${styles['fork-btn']} p-0`} >
+                    <Link href={'https://gitlab.com/purellarohith'} target='_blank' className={`flex  px-0.5  ${styles['fork-btn-inner']} rounded-md text-white py-6`} >
+                        <div className='flex items-center gap-2'>
                             <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
                             <AiFillStar style={{ fontSize: "1.1em" }} />
-                        </>
+                        </div>
                     </Link>
                 </li>
             </ul>
