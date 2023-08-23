@@ -27,7 +27,8 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.md5} style={{ paddingBottom: 20 }}>
-            <img
+            <Image
+              width={undefined}
               src={'/assets/svgs/home-main.svg'}
               alt="home pic"
               className={styles['img-fluid']}
