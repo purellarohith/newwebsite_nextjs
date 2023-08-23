@@ -18,7 +18,7 @@ export default function Home() {
             </h1>
 
             <h1 className={styles["heading-name"]}>
-              I'M
+              {`I'M`}
               <strong className={styles["main-name"]}> Rohith Purella</strong>
             </h1>
 
