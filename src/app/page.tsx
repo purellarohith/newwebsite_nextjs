@@ -104,7 +104,7 @@ export default function Home() {
           <div>
           </div>
         </section>
-        <section className={`${styles['home-about-social']} z-40`}>
+        <section className={`${styles['home-about-social']} pb-4`}>
           <h1>FIND ME ON</h1>
           <p>
             Feel free to <span className={styles['purple']}>connect </span>with me
@@ -140,16 +140,6 @@ export default function Home() {
                 <FaLinkedinIn />
               </Link>
             </li>
-            {/* <li className={styles["social-icons"]}>
-              <a
-                href="https://www.instagram.com/i__am_rohit8"
-                target="_blank"
-                rel="noreferrer"
-                className={`${styles['icon-colour']}  ${styles['home-social-icons']}`}
-              >
-                <AiFillInstagram />
-              </a>
-            </li> */}
           </ul>
         </section>
       </div>
