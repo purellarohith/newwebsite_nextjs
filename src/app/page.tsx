@@ -6,6 +6,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiFillGitlab,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import Link from 'next/link';
@@ -13,7 +14,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={`relative ${styles['bg-color']} `}>
+    <main className={`relative `} id='bg-color'>
       <div>
         <Particle />
         <section className={`flex flex-col items-center justify-between p-24 ${styles.home_section}`}>
@@ -119,6 +120,16 @@ export default function Home() {
                   className={`${styles['icon-colour']}  ${styles['home-social-icons']}`}
                 >
                   <AiFillGithub />
+                </Link>
+              </li>
+              <li className={styles["social-icons"]}>
+                <Link
+                  href="https://gitlab.com/purellarohith"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`${styles['icon-colour']}  ${styles['home-social-icons']}`}
+                >
+                  <AiFillGitlab />
                 </Link>
               </li>
               <li className={styles["social-icons"]}>

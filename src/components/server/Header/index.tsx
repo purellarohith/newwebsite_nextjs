@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+
+import React, { useState, useEffect } from 'react';
 import { CgFileDocument, CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import {
@@ -10,12 +12,35 @@ import {
 import Link from 'next/link';
 import styles from './header.module.scss';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 
 
 const Header: React.FC = () => {
+
+    const [navColour, updateNavbar] = useState(false);
+    const pathname = usePathname();
+
+    console.log("pathname  => ", pathname)
+
+    function scrollHandler() {
+        if (window.scrollY >= 20) {
+            updateNavbar(true);
+        } else {
+            updateNavbar(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", scrollHandler);
+        return () => {
+            window.removeEventListener("scroll", scrollHandler)
+        }
+    }, [])
+
+
     return (
-        <nav className={`w-full flex items-center fixed px-8 py-4 justify-between ${styles.nav} z-30`}>
+        <nav className={`w-full flex items-center fixed px-8 py-4 justify-between ${styles.nav} ${navColour && styles.sticky} z-30`}>
             <div>
                 <Image
                     src={'/assets/svgs/logo-white.svg'}
@@ -26,21 +51,21 @@ const Header: React.FC = () => {
             </div>
             <ul className='flex items-center gap-14'>
                 <li className='list-none'>
-                    <Link href={'/'} className='block relative z-10 text-white text-lg'>
+                    <Link href={'/'} className={`block relative z-10 text-white text-lg ${pathname === '/' && styles.active}`}>
                         <div className='flex items-center gap-2'>
                             <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
                         </div>
                     </Link>
                 </li>
                 <li className='list-none'>
-                    <Link href={'/about'} className='block relative z-10 text-white text-lg'>
+                    <Link href={'/about'} className={`block relative z-10 text-white text-lg ${pathname.includes('/about') && styles.active}`}>
                         <div className='flex items-center gap-2'>
                             <AiOutlineUser style={{ marginBottom: "2px" }} /> About
                         </div>
                     </Link>
                 </li>
                 <li className='list-none'>
-                    <Link href={'/projects'} className='block relative z-10 text-white text-lg'>
+                    <Link href={'/projects'} className={`block relative z-10 text-white text-lg ${pathname.includes('/projects') && styles.active}`}>
                         <div className='flex items-center gap-2'>
                             <AiOutlineFundProjectionScreen
                                 style={{ marginBottom: "2px" }}
@@ -50,14 +75,14 @@ const Header: React.FC = () => {
                     </Link>
                 </li>
                 <li className='list-none'>
-                    <Link href={'/resume'} className='block relative z-10 text-white text-lg'>
+                    <Link href={'/resume'} className={`block relative z-10 text-white text-lg ${pathname.includes('/resume') && styles.active}`}>
                         <div className='flex items-center gap-2'>
                             <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
                         </div>
                     </Link>
                 </li>
                 {/* <li className='list-none'>
-                    <Link href={'/'} className='block relative z-10 text-white text-lg'>
+                    <Link href={'/'} className={`block relative z-10 text-white text-lg ${pathname.includes('/') && styles.active}`}>
                         <div className='flex items-center gap-2'>
                             <ImBlog style={{ marginBottom: "2px" }} /> Blogs
                         </div>

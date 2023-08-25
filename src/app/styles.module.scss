@@ -3,11 +3,6 @@ $image-gradient: linear-gradient(to bottom left,
         rgba(12, 10, 22, 0.863));
 $impTextColor: #c770f0;
 
-.bg-color {
-    background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
-    z-index: 0;
-}
-
 .home_section {
     position: relative;
     z-index: -1;

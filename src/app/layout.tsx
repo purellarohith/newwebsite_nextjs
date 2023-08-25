@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Purella Rohith',
   description: 'Personal web site',
+  applicationName: 'Purella Rohith',
+  appleWebApp: true,
+  creator: 'Rohith Purella',
+  keywords: "Purella Rohith",
 }
 
 export default function RootLayout({
@@ -28,7 +32,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
-
       </body>
     </html>
   )
