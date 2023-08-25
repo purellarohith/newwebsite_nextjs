@@ -14,7 +14,7 @@ import styles from './header.module.scss';
 
 const Header: React.FC = () => {
     return (
-        <nav className={`w-full flex items-center fixed px-8 py-8 justify-center ${styles.nav}`}>
+        <nav className={`w-full flex items-center fixed px-8 py-8 justify-center ${styles.nav} z-30`}>
             <ul className='flex items-center gap-14'>
                 <li className='list-none'>
                     <Link href={'/'} className='block relative z-10 text-white text-lg'>

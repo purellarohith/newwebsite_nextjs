@@ -8,14 +8,15 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import Link from 'next/link';
 
 
 export default function Home() {
   return (
     <main className={`relative ${styles['bg-color']} `}>
-      <section>
+      <div>
         <Particle />
-        <section className={`flex min-h-screen flex-col items-center justify-between p-24 ${styles.home_section}`}>
+        <section className={`flex flex-col items-center justify-between p-24 ${styles.home_section}`}>
           <section className={`w-full ${styles.home_content}`}>
             <div className='flex flex-row'>
               <div className={styles.home_header}>
@@ -103,41 +104,41 @@ export default function Home() {
           <div>
           </div>
         </section>
-        <section className={styles['home-about-social']}>
+        <section className={`${styles['home-about-social']} z-40`}>
           <h1>FIND ME ON</h1>
           <p>
             Feel free to <span className={styles['purple']}>connect </span>with me
           </p>
           <ul className={styles['home-about-social-links']}>
             <li className={styles["social-icons"]}>
-              <a
+              <Link
                 href="https://github.com/purellarohith"
                 target="_blank"
                 rel="noreferrer"
                 className={`${styles['icon-colour']}  ${styles['home-social-icons']}`}
               >
                 <AiFillGithub />
-              </a>
+              </Link>
             </li>
             <li className={styles["social-icons"]}>
-              <a
+              <Link
                 href="https://twitter.com/iamrohithpatel"
                 target="_blank"
                 rel="noreferrer"
                 className={`${styles['icon-colour']}  ${styles['home-social-icons']}`}
               >
                 <AiOutlineTwitter />
-              </a>
+              </Link>
             </li>
             <li className={styles["social-icons"]}>
-              <a
+              <Link
                 href="https://www.linkedin.com/in/rohith-purella-b66066211/"
                 target="_blank"
                 rel="noreferrer"
                 className={`${styles['icon-colour']}  ${styles['home-social-icons']}`}
               >
                 <FaLinkedinIn />
-              </a>
+              </Link>
             </li>
             {/* <li className={styles["social-icons"]}>
               <a
@@ -151,7 +152,7 @@ export default function Home() {
             </li> */}
           </ul>
         </section>
-      </section>
+      </div>
     </main>
   )
 }

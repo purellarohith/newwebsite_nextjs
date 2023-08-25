@@ -5,7 +5,7 @@ $impTextColor: #c770f0;
 
 .bg-color {
     background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
-    z-index: -2;
+    z-index: 0;
 }
 
 .home_section {
@@ -182,10 +182,6 @@ $impTextColor: #c770f0;
     display: inline-block !important;
     padding-right: 15px;
     padding-left: 15px;
-
-    &:hover {
-        background-color: #700c86;
-    }
 }
 
 .icon-colour {
