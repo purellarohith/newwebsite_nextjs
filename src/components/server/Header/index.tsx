@@ -9,12 +9,21 @@ import {
 } from "react-icons/ai";
 import Link from 'next/link';
 import styles from './header.module.scss';
+import Image from 'next/image';
 
 
 
 const Header: React.FC = () => {
     return (
-        <nav className={`w-full flex items-center fixed px-8 py-8 justify-center ${styles.nav} z-30`}>
+        <nav className={`w-full flex items-center fixed px-8 py-4 justify-between ${styles.nav} z-30`}>
+            <div>
+                <Image
+                    src={'/assets/svgs/logo-white.svg'}
+                    height={60}
+                    width={60}
+                    alt='Brand logo'
+                />
+            </div>
             <ul className='flex items-center gap-14'>
                 <li className='list-none'>
                     <Link href={'/'} className='block relative z-10 text-white text-lg'>
