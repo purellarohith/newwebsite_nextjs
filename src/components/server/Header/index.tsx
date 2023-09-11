@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { CgFileDocument, CgGitFork } from "react-icons/cg";
+import { CgFileDocument, CgGitFork, CgSoftwareDownload } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import {
     AiFillStar,
@@ -74,20 +74,13 @@ const Header: React.FC = () => {
                         </div>
                     </Link>
                 </li>
-                <li className='list-none'>
-                    <Link href={'/resume'} className={`block relative z-10 text-white text-lg ${pathname.includes('/resume') && styles.active}`}>
+                <li className={`list-none ${styles['fork-btn']} p-0`}>
+                    <Link href={'https://drive.google.com/file/d/1-TjBon1bqmyRSnHlT1ROd17rCHH7VpLt/view?usp=sharing'} className={`flex   ${styles['fork-btn-inner']} rounded-md text-white py-6`} download={true} target='_blank'>
                         <div className='flex items-center gap-2'>
-                            <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                            <CgSoftwareDownload style={{ fontSize: "1.2em" }} /> Resume
                         </div>
                     </Link>
                 </li>
-                {/* <li className='list-none'>
-                    <Link href={'/'} className={`block relative z-10 text-white text-lg ${pathname.includes('/') && styles.active}`}>
-                        <div className='flex items-center gap-2'>
-                            <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-                        </div>
-                    </Link>
-                </li> */}
                 <li className={`list-none ${styles['fork-btn']} p-0`} >
                     <Link href={'https://gitlab.com/purellarohith'} target='_blank' className={`flex  px-0.5  ${styles['fork-btn-inner']} rounded-md text-white py-6`} >
                         <div className='flex items-center gap-2'>

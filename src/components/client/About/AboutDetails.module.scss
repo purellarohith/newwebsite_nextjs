@@ -1,0 +1,28 @@
+$impTextColor: #c770f0;
+
+
+.quote-card-view {
+    border: none !important;
+    color: white !important;
+    background-color: transparent !important;
+
+    .blockquote {
+        font-size: 1.25rem;
+    }
+
+    .purple {
+        color: $impTextColor !important;
+    }
+
+    ul {
+        padding-left: 2rem;
+
+        .about-activity {
+            list-style: none !important;
+            text-align: left !important;
+            padding-left: 1px !important;
+        }
+    }
+
+
+}
