@@ -66,7 +66,7 @@ const Projects = () => {
         },
         {
             title: 'BigHaat',
-            imagePath: `${process.env.sas.base}bighaat.jpg${process.env.sas.token}`,
+            imagePath: `${process.env.sas.base}bighaat_db.png${process.env.sas.token}`,
             description: `BigHaat is the largest Agriculture Digital Platform for Farmers in India. Combining years of experience in agriculture with the power of data, science, and technology, BigHaat's Farmer-Centric Platform is empowering farmers to acquire the right knowledge about crops, and get timely and vital advice.`,
             link: 'https://play.google.com/store/apps/details?id=com.BigHaat&hl=en&gl=US'
         },
