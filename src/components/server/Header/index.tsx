@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { CgFileDocument, CgGitFork, CgSoftwareDownload } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
 import {
     AiFillStar,
     AiOutlineHome,
