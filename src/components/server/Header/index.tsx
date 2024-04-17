@@ -74,7 +74,7 @@ const Header: React.FC = () => {
                     </Link>
                 </li>
                 <li className={`list-none ${styles['fork-btn']} p-0`}>
-                    <Link href={'https://drive.google.com/file/d/1-TjBon1bqmyRSnHlT1ROd17rCHH7VpLt/view?usp=sharing'} className={`flex   ${styles['fork-btn-inner']} rounded-md text-white py-6`} download={true} target='_blank'>
+                    <Link href={'https://drive.google.com/file/d/1V5omlrDpgSYSfOy2HOwBA8YeFfSScqkT/view?usp=sharing'} className={`flex   ${styles['fork-btn-inner']} rounded-md text-white py-6`} download={true} target='_blank'>
                         <div className='flex items-center gap-2'>
                             <CgSoftwareDownload style={{ fontSize: "1.2em" }} /> Resume
                         </div>

@@ -76,6 +76,14 @@ const Projects = () => {
             description: `ADify by ADmyBRAND is One-Stop solution for everything Marketing.`,
             link: 'https://play.google.com/store/apps/details?id=com.admybrand.adify&hl=en&gl=US'
         },
+        {
+            title: 'Logiglo',
+            imagePath: `${process.env.sas.base}amb_da.png${process.env.sas.token}`,
+            description: `Developing a website for the Logiglo supply chain social network, which is used for posting logistics related
+            queries. Users can interact with each other and express their answers with replies and comments.
+            Technologies used: React.Js, Node.Js, MySQL, Flexbox.`,
+            link: 'https://logiglo.com'
+        },
     ])
 
 
